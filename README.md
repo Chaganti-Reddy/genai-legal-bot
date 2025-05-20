@@ -1,6 +1,6 @@
 # GenAI Legal Assistant Chatbot
 
-A powerful, modular legal chatbot that leverages multi-agent architecture to parse, retrieve, and summarize complex Indian legal documents in plain English — all through an interactive Streamlit interface.
+A powerful, modular legal chatbot that leverages multi-agent architecture to parse, retrieve, and summarize complex Indian legal documents in plain English — all through an interactive Streamlit interface. - ![Test here](https://genai-legalbot.streamlit.app/)
 
 Supports multiple LLM providers:
 
