@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "genai-legal-bot"
+version = "0.1.0"
+description = "A multi-agent legal chatbot using Streamlit, OpenAI, Ollama, Gemini, and Groq"
+authors = ["Venkatarami Reddy <chagantivenkataramireddy1@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "agents" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.45.0"
+openai = "^1.78.1"
+google-generativeai = "^0.8.5"
+groq = "^0.25.0"
+sentence-transformers = "^4.1"
+faiss-cpu = "^1.11.0"
+numpy = "*"
+scikit-learn = "*"
+tk = "*"  
+pymupdf = "^1.25.5"
+
+[tool.poetry.group.dev.dependencies]
+black = "*"
+isort = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
