@@ -8,8 +8,6 @@ import json
 import datetime
 from agents.query_engine import LegalQueryEngine
 from agents.summarizer_agent import SummarizerAgent
-from pathlib import Path
-from tkinter import Tk, filedialog
 
 # -------------------- Full Session Reset --------------------
 if st.sidebar.button("🧹 Clear Session"):
@@ -99,22 +97,20 @@ if uploaded_session:
     st.session_state.api_keys = loaded_data.get("api_keys", {})
     st.sidebar.success("Session loaded! Please reselect model/API key to activate.")
 
-# Save session using file dialog
-st.sidebar.markdown("---")
-if st.sidebar.button("💾 Save Session To File"):
-    root = Tk()
-    root.withdraw()
-    root.wm_attributes('-topmost', 1)
-    filename = filedialog.asksaveasfilename(defaultextension=".json", filetypes=[("JSON files", "*.json")])
-    root.destroy()
-    if filename:
-        with open(filename, "w") as f:
-            json.dump({
-                "model": st.session_state.model_source,
-                "api_keys": st.session_state.api_keys,
-                "chat_history": st.session_state.chat_history
-            }, f, indent=2)
-        st.sidebar.success(f"Session saved to {filename}")
+# Save session as downloadable JSON file
+st.sidebar.markdown("### 💾 Download Session")
+session_json = json.dumps({
+    "model": st.session_state.model_source,
+    "api_keys": st.session_state.api_keys,
+    "chat_history": st.session_state.chat_history
+}, indent=2)
+
+st.sidebar.download_button(
+    label="Download Session",
+    data=session_json,
+    file_name="session.json",
+    mime="application/json"
+)
 
 # -------------------- Chat UI --------------------
 user_query = st.text_input("Type your legal question:")
