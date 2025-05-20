@@ -19,7 +19,7 @@ if st.sidebar.button("🧹 Clear Session"):
 # -------------------- Session Defaults --------------------
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
-    st.session_state.model_source = "ollama"
+    st.session_state.model_source = "openai"
     st.session_state.model_name = ""
     st.session_state.api_keys = {"gemini": "", "openai": "", "groq": ""}
     st.session_state.selected_model = ""
