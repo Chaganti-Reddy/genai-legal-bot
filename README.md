@@ -119,6 +119,12 @@ poetry run streamlit run app.py
 4. View the retrieved legal sections + a plain-English summary
 5. Save the session to pick up later
 
+![Example1](./assets/example1.png)
+<br>
+![Example2](./assets/example2.png)
+<br>
+![Example3](./assets/example3.png)
+
 ---
 
 ## Commands & Dev Utilities
@@ -141,4 +147,4 @@ Built by \[Venkatarami Reddy] for legal-tech & GenAI innovation. Powered by open
 
 ---
 
-For support or contributions, open a GitHub issue or email: [chagantivenkataramireddy1@gmail.com@gmail.com](mailto:chagantivenkataramireddy1@gmail.com)
+For support or contributions, open a GitHub issue or email: [chagantivenkataramireddy1@gmail.com](mailto:chagantivenkataramireddy1@gmail.com)
