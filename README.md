@@ -7,7 +7,7 @@ Supports multiple LLM providers:
 * **OpenAI** (ChatGPT)
 * **Groq** (LLM-as-a-service)
 * **Gemini** (Google)
-* **Ollama** (local models like LLaMA3)
+* **Ollama** (local models like LLaMA3) - Only for local usage
 
 ---
 
