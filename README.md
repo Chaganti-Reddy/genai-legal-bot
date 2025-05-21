@@ -24,6 +24,12 @@ Supports multiple LLM providers:
 
 ---
 
+## System Architecture
+
+![Assistant Architecture](./Architecture.png)
+
+---
+
 ## Tech Stack
 
 | Component   | Tool/Library                 |
